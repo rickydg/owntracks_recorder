@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>OwnTracks_Recorder</Name>
+  <Repository>owntracks/recorder</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8083]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/owntracks/recorder/raw/master/assets/recorder-logo-192.png</Icon>
+  <ExtraParams/>
+  <PostArgs>owntracks/#</PostArgs>
+  <CPUset/>
+  <DateInstalled>1633442775</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8083</HostPort>
+        <ContainerPort>8083</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/OwnTracks/Recorder</HostDir>
+      <ContainerDir>/store</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>OTR_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1883</Value>
+      <Name>OTR_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>OTR_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>OTR_PASS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Port" Target="8083" Default="" Mode="tcp" Description="Container Port: 8083" Type="Port" Display="always" Required="false" Mask="false">8083</Config>
+  <Config Name="Store" Target="/store" Default="" Mode="rw" Description="Container Path: /store" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/OwnTracks/Recorder</Config>
+  <Config Name="MQTT Broker Hostname/Address" Target="OTR_HOST" Default="" Mode="" Description="Container Variable: OTR_HOST" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MQTT Broker Port" Target="OTR_PORT" Default="1883" Mode="" Description="Container Variable: OTR_PORT" Type="Variable" Display="always" Required="false" Mask="false">1883</Config>
+  <Config Name="MQTT Broker Username" Target="OTR_USER" Default="" Mode="" Description="Container Variable: OTR_USER" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MQTT Broker Password" Target="OTR_PASS" Default="" Mode="" Description="Container Variable: OTR_PASS" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
